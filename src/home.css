@@ -1,0 +1,92 @@
+.barra{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
+    height: 50px;
+}
+
+.titulo{
+    border-style: none;
+    background-color: lightblue;
+    color: white;
+    font-size: 25px;
+}
+
+.titulo a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.titulo a:visited{
+    color:white;
+}
+
+.login{
+    background-color: blueviolet;
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin-top: 5px;
+    color: white;
+    border-color: lightblue;
+}
+
+.login a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.login a:visited{
+    color:white;
+}
+
+.signup{
+    border-style: none;
+    background-color: lightblue;
+    margin-left: 10px;
+}
+
+.signup a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.signup a:visited{
+    color:white;
+}
+th{
+    border: solid 1px;
+    width: 50%;
+    height: 50px;
+    border-style: none;
+}
+
+td{
+    border: solid 1px;
+    width: 50%;
+    height: 50px;
+    border-style: none;
+}
+
+
+tr{
+    border: solid 1px;
+    width: 50%;
+    height: 50px;
+    border-top-color: rgb(255, 255, 255);
+    border-left-color: white;
+    border-right-color: white;
+    
+    
+}
+
+table{
+    width: 50%;
+    position: relative;
+    left:25%;
+}
+
+.tableBtn{
+    border-radius: 12px;
+    border-width: 0px;
+    color: blueviolet;
+}

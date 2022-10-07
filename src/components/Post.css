@@ -1,0 +1,94 @@
+.divTitulo{
+    height: 10vh;
+
+    position: relative;
+    top: 0%;
+}
+.divComentarios{
+    height: 50vh;
+    border-radius: 12px;
+    position: relative;
+    top: 50%;
+    width: 80%;
+    left: 10%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    color: white; 
+    border: solid 1px black;
+}
+
+.divInput{
+    height: 20vh;
+ 
+    position: relative;
+    top: 30px;
+}
+
+.TextAr{
+    height: 120%;
+    width: 80%;
+    border-radius: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    margin-top: 3%;
+    padding: 25px;
+}
+
+.divButton{
+    position: relative;
+    top: 32px;
+}
+
+.btnEnviar{
+    height: 50px;
+    width: 200px;
+    border:0;
+    border-radius: 12px;
+    background-color: rgb(143, 91, 191);
+    color:white;
+    font-size: medium;
+}
+
+.btnEnviar:hover{
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.titEnviar{
+    font-size: 2.9rem;
+    font-weight: bold;
+    
+}
+
+.comentario{
+    position: relative;
+    left: 4%;
+    width: 90%;
+    height: 100px;
+    background-color: rgb(223, 223, 223);
+    margin:10px;
+    border-radius: 12px;
+}
+.imgDiv{
+    background-color: lightblue;
+    height: 100%;
+    width: 20%;
+    position: relative;
+    border-radius: 100px;
+}
+
+.comDiv{
+    background-color: rgb(237, 237, 237);
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    color: black;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    text-align: left;
+    
+}
