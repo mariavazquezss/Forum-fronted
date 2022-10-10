@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-
+import {
+	ReasonPhrases,
+	StatusCodes,
+	getReasonPhrase,
+	getStatusCode,
+} from 'http-status-codes';
 export const Registrar = () => {
 
   const navigate = useNavigate();
@@ -19,7 +24,41 @@ export const Registrar = () => {
   const [nameuser, setnameuser] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [respuesta, setrespuesta] = useState("");
 
+  function registrarUsuario()
+  {
+    fetch('http://25.16.222.53:8081/usuario', {
+            method: 'POST', headers: { 'Content-Type': 'Application/json' },
+            body: JSON.stringify({
+
+                "name": nameuser,
+            
+                "email": email,
+            
+                "password": password,
+            
+                "image": "no hay imagen",
+            
+            })
+        })
+        .then(promise => promise)
+        .then(res => {
+          console.log(res);
+          if(res.status === StatusCodes.EXPECTATION_FAILED)
+          {
+            alert("El usuario ya está en uso");
+          }
+          else
+          {
+            alert("El usuario se ha registrado correctamente");
+            navigate('/login');
+          }
+        }).catch(error => {
+          console.log(error);
+        })
+    
+  }
 
   const botonGuardar = (e) => {
     e.preventDefault();
@@ -42,7 +81,7 @@ export const Registrar = () => {
     document.getElementById("miFormulario").reset();
   }
 
-
+  
   return (
     
 
@@ -50,7 +89,7 @@ export const Registrar = () => {
       
       <nav className='barra'>
           <div>
-              <button className='titulo'><a href={'/home'}>DiscussBoard</a></button>
+              <button className='titulo'><a href={'/'}>DiscussBoard</a></button>
           </div> 
           <div>
               <button className='login'><a href={'/login'}>Log In</a></button>
@@ -81,7 +120,7 @@ export const Registrar = () => {
 
         <div className="row" style={{marginTop:20}}>
           <div className="col">
-            <button className="btn btn-primary btn-lg" onClick={()=>(navigate('/login'))}>Submit</button>
+            <button className="btn btn-primary btn-lg" onClick={registrarUsuario}>Submit</button>
           </div>
         </div>
       </form>

@@ -31,7 +31,7 @@ export const Home = () => {
     <div className="TabMenu">
         <nav className='barra'>
             <div>
-                <button className='titulo'><a href={'/home'}>DiscussBoard</a></button>
+                <button className='titulo'><a href={'/'}>DiscussBoard</a></button>
             </div> 
             <div>
                 <button className='login'><a href={'/login'}>Log In</a></button>

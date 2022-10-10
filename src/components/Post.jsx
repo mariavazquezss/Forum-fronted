@@ -24,9 +24,7 @@ export const Post = () => {
     }, [])
 
     const sendData = () => {
-        console.log(valorinput)
-        console.log(selectvalue)
-        console.log(localStorage.getItem('usu1'))
+
         fetch('http://25.16.222.53:8081/post', {
             method: 'POST', headers: { 'Content-Type': 'Application/json' },
             body: JSON.stringify({
@@ -51,7 +49,7 @@ export const Post = () => {
             <div className="TabMenu">
                 <nav className='barra'>
                     <div>
-                    <button className='titulo'><a href={'/home'}>DiscussBoard</a></button>
+                    <button className='titulo'><a href={'/'}>DiscussBoard</a></button>
                     </div>
                     <div>
                         <button className='login'><a href={'/login'}>Log In</a></button>
